@@ -30,8 +30,14 @@ namespace FiguresLib
 
 		protected void CheckFigure()
 		{
+			//CheckOnLessThreeVirtices();
 			CheckMatchVertices();
 			CheckСrossing();
+		}
+
+		void CheckOnLessThreeVirtices()
+		{
+			if (vertices.Length < 3) throw new NotFigureException(vertices.Length);
 		}
 
 		void CheckMatchVertices()

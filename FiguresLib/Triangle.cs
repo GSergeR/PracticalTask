@@ -17,7 +17,8 @@ namespace FiguresLib
 
 		public Triangle(Point[] vertices)
 		{
-			if (vertices.Length != 3) throw new Exception("It's not a triangle");
+			//if (vertices.Length != 3) throw new Exception("It's not a triangle");
+			if (vertices.Length != 3) throw new NotTriangleException(vertices.Length);
 			triangle = new CustomVerticesFigure(vertices);
 		}
 

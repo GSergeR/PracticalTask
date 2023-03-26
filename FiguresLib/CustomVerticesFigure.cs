@@ -10,9 +10,17 @@ namespace FiguresLib
 	{
 		public CustomVerticesFigure(Point[] vertices)
 		{
-			if (vertices.Length < 3) throw new Exception("This is not a figure");
+			if (vertices.Length < 3) throw new NotFigureException(vertices.Length);
 			this.vertices = vertices;
 			CheckFigure();
+			/*try
+            {
+				CheckFigure();
+			}
+			catch (NotFigureException e)
+            {
+				Console.WriteLine(e.Message);
+            }*/
 		}
 	}
 }
